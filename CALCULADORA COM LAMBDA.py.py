@@ -1,28 +1,27 @@
-#Joana está participando de um processo seletivo para uma vaga de desenvolvedora e recebeu um desafio técnico de criar uma 
-# calculadora para somar, subtrair, multiplicar e dividir dois números.
-
-#Sua tarefa é criar um programa usando funções lambda que receba dois números e um operador 
-# matemático escolhido pelo usuário (+, -, * ou /) e exiba o resultado correspondente.
-
+#Joana is participating in a selection process for a developer position and 
+# has received a technical challenge to create a calculator to add, subtract, multiply, and divide two numbers.
+# Her task is to create a program using lambda functions that receives two numbers and a mathematical operator 
+# chosen by the user (+, -, *, or /) and displays the corresponding result.
 
 
 
-primeiro_numero = float(input('Digite o primeiro número: '))
-segundo_numero = float(input('Digite o segundo número: '))
 
-operadores = {
+first_number = float(input('Enter the first number: '))
+second_number = float(input('Enter the second number: '))
+
+operators = {
     '+': lambda x, y: x + y,
     '-': lambda x, y: x - y,
     '*': lambda x, y: x * y,
     '/': lambda x, y: x / y,
 }
 
-operacao = input('Escolha a operação matemática (+, -, *, /): ')
+operation = input('Choose the mathematical operation (+, -, *, /): ')
 
-if operacao not in operadores:
-    print("Operação inválida!")
-elif operacao == '/' and segundo_numero == 0:
-    print("Erro: divisão por zero!")
+if operation not in operators:
+    print("Invalid operation!")
+elif operation == '/' and second_number == 0:
+    print("Error: division by zero!")
 else:
-    resultado = operadores[operacao](primeiro_numero, segundo_numero)
-    print(f'O resultado é: {resultado:.2f}')
+    result = operators[operation](first_number, second_number)
+    print(f'The result is: {result:.2f}')
