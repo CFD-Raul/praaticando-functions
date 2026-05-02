@@ -1,31 +1,38 @@
-#Julia é professora e precisa de um programa para ajudar seus alunos a calcularem suas idades com base no ano de nascimento. 
-# Sua tarefa é criar uma função que receba o ano de nascimento e o ano atual e retorne à idade correspondente.
+# Julia is a teacher and needs a program to help her students calculate their ages based on their birth year.
+# Your task is to create a function that receives the birth year and the current year and returns the corresponding age.
 
 
+def calculate_age(birth_year, current_year): 
+    return current_year - birth_year 
  
-
-def calcular_idade(ano_nascimento, ano_atual): 
-    return ano_atual - ano_nascimento 
- 
-nascimento = int(input("Digite o ano de nascimento: ")) 
-atual = int(input("Digite o ano atual: ")) 
-idade = calcular_idade(nascimento, atual) 
-print(f"A idade é {idade} anos.") 
+birth = int(input("Enter the birth year: ")) 
+current = int(input("Enter the current year: ")) 
+age = calculate_age(birth, current) 
+print(f"The age is {age} years.") 
 
 
 
 
- # FIZ DESSE JEITO: 
- # def calculadora_etaria():
-    #ano_de_nascimento = int(input('Digite seu ano de nascimento: '))
-    #ano_atual = int(input('Digite o ano atual: '))
+# I DID IT THIS WAY: 
+# def age_calculator():
+#    year_of_birth = int(input('Enter your birth year: '))
+#    current_year = int(input('Enter the current year: '))
 
-    #idade_do_aluno = ano_atual - ano_de_nascimento
-   # mensagem = f'A idade do aluno é {idade_do_aluno} anos.'
-  #  return mensagem
+#    student_age = current_year - year_of_birth
+#    message = f'The student age is {student_age} years.'
+#    return message
 
-#print(calculadora_etaria()) 
-# MAS DESSA FORMA A FUNÇÃO ESTÁ ESTÁTICA, O GABARITO PROPOS UMA SOLUÇÃO MAIS REUTILIZÁVEL E DINÂMICA: ver acima!
+# print(age_calculator()) 
+# BUT THIS WAY THE FUNCTION IS STATIC, THE MODEL ANSWER PROPOSED A MORE REUSABLE AND DYNAMIC SOLUTION: see above!
+
+#The second version is less reusable because it mixes input/output operations with the function logic.
+#It directly asks for user input (input()) inside the function.
+#It returns a formatted message instead of just the calculated value.
+#This makes it harder to reuse the function in other contexts (e.g., testing, APIs, or other programs).
+#The first version is more flexible because:
+#The function only performs the calculation.
+#Inputs and outputs are handled outside the function.
+#This separation makes the code more modular and reusable.
 
 
 
