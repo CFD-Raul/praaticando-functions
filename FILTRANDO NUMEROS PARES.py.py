@@ -1,11 +1,11 @@
-#Lucas está desenvolvendo um sistema para gerar relatórios financeiros 
-# e precisa filtrar apenas os valores pares de uma lista de números 
-# informada pelo usuário.
+# Lucas is developing a system to generate financial reports
+# and needs to filter only the even values from a list of numbers
+# provided by the user.
 
-#Crie um programa que receba uma lista de números 
-# e exiba apenas os pares usando a função filter().
+# Create a program that receives a list of numbers
+# and displays only the even ones using the filter() function.
 
 
-numeros_do_usuario = input('Digite os números separados por espaço: ').split()
-pares = filter(lambda x: int(x) % 2 == 0, numeros_do_usuario) 
-print("Números pares:", " ".join(pares)) 
+user_numbers = input('Enter the numbers separated by space: ').split()
+even_numbers = filter(lambda x: int(x) % 2 == 0, user_numbers) 
+print("Even numbers:", " ".join(even_numbers))

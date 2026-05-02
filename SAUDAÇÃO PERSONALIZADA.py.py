@@ -1,21 +1,21 @@
-# Beatriz está desenvolvendo um sistema de atendimento para um site de serviços. 
-# Ela deseja criar um programa que exiba uma saudação personalizada dependendo da hora do dia que o usuário acessa a plataforma. 
-# O sistema deverá ter a seguinte regra:
+# Beatriz is developing a customer service system for a service website.
+# She wants to create a program that displays a personalized greeting depending on the time of day the user accesses the platform.
+# The system must follow this rule:
 
-# Se for antes das 12h, exibir "Bom dia";
+# If it is before 12 PM, display "Good morning";
 
-# Entre 12h e 18h, exibir "Boa tarde";
+# Between 12 PM and 6 PM, display "Good afternoon";
 
-# Após 18h, exibir "Boa noite".
+# After 6 PM, display "Good evening".
 
-def saudacao_personalizada(hora):
-    if hora < 12:
-        return 'Bom dia'
-    elif hora < 18:
-        return 'Boa tarde'
+def personalized_greeting(hour):
+    if hour < 12:
+        return 'Good morning'
+    elif hour < 18:
+        return 'Good afternoon'
     else:
-        return 'Boa noite'
+        return 'Good evening'
     
-nome_do_usuario = input('Digite seu nome: ')
-hora_atual = int(input('Digite o horário atual (0-23): '))
-print(f'{saudacao_personalizada(hora_atual)}, {nome_do_usuario}!')
+user_name = input('Enter your name: ')
+current_hour = int(input('Enter the current time (0-23): '))
+print(f'{personalized_greeting(current_hour)}, {user_name}!')

@@ -1,13 +1,13 @@
-#Miguel está desenvolvendo um sistema de cupons de desconto e precisa de uma forma para aplicar diferentes taxas de desconto sobre os valores das compras.
-#Diante deste problema, crie uma closure que gere uma função capaz de calcular o preço final com um desconto fixo definido pelo usuário.
+# Miguel is developing a discount coupon system and needs a way to apply different discount rates to purchase values.
+# Given this problem, create a closure that generates a function capable of calculating the final price with a fixed discount defined by the user.
 
-def desconto(porcentagem_do_desconto):
-    def valor_final(valor_da_compra):
-        return valor_da_compra - (valor_da_compra * (porcentagem_do_desconto / 100))
-    return valor_final
+def discount(discount_percentage):
+    def final_value(purchase_value):
+        return purchase_value - (purchase_value * (discount_percentage / 100))
+    return final_value
 
-valor_da_compra = float(input('Digite o preço bruto do produto: '))
-porcentagem_do_desconto = float(input('Digite a porcentagem de desconto desejada (de 1 a 100): '))
-calcular_desconto = desconto(porcentagem_do_desconto)
-preco_final = calcular_desconto(valor_da_compra)
-print(f'O preço final com desconto é de: R${preco_final}')
+purchase_value = float(input('Enter the gross price of the product: '))
+discount_percentage = float(input('Enter the desired discount percentage (from 1 to 100): '))
+calculate_discount = discount(discount_percentage)
+final_price = calculate_discount(purchase_value)
+print(f'The final price with discount is: ${final_price}')
