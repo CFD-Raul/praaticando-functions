@@ -1,13 +1,13 @@
-# Carlos trabalha em um comércio e precisa saber o valor total de vendas realizadas no dia.
-# As vendas são informadas em uma única linha separadas por espaços.
+# Carlos works in a store and needs to know the total value of sales made during the day.
+# The sales are provided in a single line separated by spaces.
 
-# Sua tarefa é criar um programa que receba essa linha, 
-# converta os valores para números e exiba o total.
+# Your task is to create a program that receives this line,
+# converts the values to numbers and displays the total.
 
-def conversor_de_valores(lista):
-    return [float(valores) for valores in lista]
+def values_converter(lista):
+    return [float(values) for values in lista]
 
-valores = input('Digite os valores das vendas: ').split()
-valores_convertidos = conversor_de_valores(valores)
-total = sum(valores_convertidos)
-print(f'O total das vendas foi: R${total:.2f}')
+values = input('Enter the sales values: ').split()
+converted_values = values_converter(values)
+total = sum(converted_values)
+print(f'The total sales amount was: ${total:.2f}')
