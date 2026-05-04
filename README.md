@@ -3,7 +3,9 @@
 ![Repo Size](https://img.shields.io/github/repo-size/CFD-Raul/praaticando-functions?style=for-the-badge)
 ![Top Language](https://img.shields.io/github/languages/top/CFD-Raul/praaticando-functions?style=for-the-badge)
 ![Last Commit](https://img.shields.io/github/last-commit/CFD-Raul/praaticando-functions?style=for-the-badge)
-  <b>Simple exercises to practice and understand functions</b>
+
+
+<b>Simple exercises to practice and understand functions</b>
 </p>
 
 ---
